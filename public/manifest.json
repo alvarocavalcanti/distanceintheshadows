@@ -1,0 +1,16 @@
+{
+  "name": "Distance in the Shadows",
+  "version": "2026-06-15",
+  "manifest_version": 1,
+  "icon": "/img/icon.svg",
+  "author": "Alvaro Cavalcanti",
+  "homepage_url": "https://github.com/alvarocavalcanti/distanceintheshadows",
+  "description": "Easily measure Close, Near, and Far distances for Shadowdark RPG tokens.",
+  "action": {
+    "title": "Distance in the Shadows",
+    "icon": "/img/icon.svg",
+    "popover": "/",
+    "height": 280,
+    "width": 320
+  }
+}
