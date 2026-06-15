@@ -8,7 +8,7 @@
   "description": "Easily measure Close, Near, and Far distances for Shadowdark RPG tokens.",
   "action": {
     "title": "Distance in the Shadows",
-    "icon": "/img/icon.svg",
+    "icon": "/img/menu-icon.svg",
     "popover": "/",
     "height": 280,
     "width": 320

@@ -12,7 +12,7 @@ export function setupContextMenu() {
     id: `${ID}/context-menu-sd-distances`,
     icons: [
       {
-        icon: `${window.location.origin}/img/icon.svg`,
+        icon: `${window.location.origin}/img/menu-icon.svg`,
         label: "SD Distances",
         filter: {
           every: [
