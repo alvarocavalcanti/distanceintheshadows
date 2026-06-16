@@ -4,6 +4,7 @@ import { setupContextMenu } from "../contextMenu";
 import { useTheme } from "../hooks/useTheme";
 import { ColorMode } from "../themes";
 import { PALETTES, DISTANCE_METADATA_KEY, updateAllDistanceItems } from "../utils";
+import WhatsNew from "./WhatsNew";
 
 export default function SPA() {
   const [colorMode, setColorMode] = useState<ColorMode>('dark');
@@ -14,6 +15,14 @@ export default function SPA() {
     return localStorage.getItem("sd-distances-palette") || "gray";
   });
   const [hasTemplates, setHasTemplates] = useState(false);
+  const [version, setVersion] = useState("unknown");
+
+  useEffect(() => {
+    fetch("/manifest.json")
+      .then((b) => b.json())
+      .then((j) => j.version)
+      .then(setVersion);
+  }, []);
 
   const setTheme = (theme: string): void => {
     const root = document.documentElement;
@@ -74,6 +83,7 @@ export default function SPA() {
 
   return (
     <div className="flex flex-col h-screen bg-theme-bg text-theme p-3 select-none overflow-hidden justify-between">
+      <WhatsNew currentVersion={version} storageKey="distance-in-the-shadows-last-seen-version" />
       <header className="flex justify-between items-center mb-3">
         <div>
           <h1 className="text-md font-bold leading-tight">SD Distances</h1>
@@ -142,7 +152,7 @@ export default function SPA() {
           rel="noopener noreferrer" 
           className="hover:text-theme-primary hover:underline transition-colors"
         >
-          v2026-06-15
+          v{version}
         </a>
       </footer>
     </div>
