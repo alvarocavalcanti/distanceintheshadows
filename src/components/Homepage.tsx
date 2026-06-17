@@ -43,6 +43,14 @@ const Homepage: React.FC = () => {
           <div className="text-stone-500 text-xs">
             By <a href="http://memorablenaton.es" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors">Alvaro Cavalcanti</a> &bull; Version {version}
           </div>
+
+          <div className="mt-6 rounded-2xl overflow-hidden border border-stone-800 shadow-2xl shadow-purple-900/20">
+            <img
+              src="/img/hero.png"
+              alt="Distance in the Shadows — extension preview"
+              className="w-full object-cover"
+            />
+          </div>
         </header>
 
         {/* Installation Section */}
