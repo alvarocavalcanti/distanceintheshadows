@@ -1,6 +1,5 @@
 import OBR from "@owlbear-rodeo/sdk";
 import React, { useEffect, useState } from "react";
-import { BrowserRouter } from "react-router-dom";
 
 import SceneNotReady from "./SceneNotReady";
 import SPA from "./SPA";
@@ -13,9 +12,7 @@ const App: React.FC = () => {
   }, []);
 
   return sceneReady ? (
-    <BrowserRouter>
-      <SPA />
-    </BrowserRouter>
+    <SPA />
   ) : (
     <SceneNotReady />
   );
